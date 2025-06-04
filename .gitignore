@@ -1,0 +1,4 @@
+venv/
+mlruns/
+logs/
+Project1.egg-info/
