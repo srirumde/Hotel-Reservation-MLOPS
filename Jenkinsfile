@@ -60,7 +60,8 @@ pipeline{
                 withCredentials([file(credentialsId: 'gcp-key', variable : 'GOOGLE_APP_CREDENTIALS')]){
                     script{
                         echo 'Deployed to Google Cloud Run............'
-                        sh '''
+                        sh 
+                        '''
                         export PATH=$PATH:${GCLOUD_PATH}
 
                         gcloud auth activate-service-account --key-file=${GOOGLE_APP_CREDENTIALS}
@@ -68,12 +69,10 @@ pipeline{
                         gcloud config set project ${GCP_PROJECT}
 
                         gcloud run deploy ml-project \
-                        --platform managed \
-                            --image=gcr.io/${GCP_PROJECT}/ml-project:latest \ 
-                            --platform=managed \ 
+                        --platform=managed \
+                            --image=gcr.io/${GCP_PROJECT}/ml-project:latest \
                             --region=us-central1 \
                             --allow-unauthenticated
-                        
                         '''
                     }
                 }
