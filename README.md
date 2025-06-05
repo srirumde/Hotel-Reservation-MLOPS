@@ -4,7 +4,7 @@ BookingFlow AI is an end-to-end **Hotel Reservation Prediction System** built wi
 
 ---
 
-## 🚀 Demo & Results
+## 🚀 Model Metrics 
 
 > 📊
 > ![image](https://github.com/user-attachments/assets/2b2d1db9-f5c1-43c3-870b-bc49fcd2c25b)
