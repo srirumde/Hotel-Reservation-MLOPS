@@ -60,8 +60,7 @@ pipeline{
                 withCredentials([file(credentialsId: 'gcp-key', variable : 'GOOGLE_APP_CREDENTIALS')]){
                     script{
                         echo 'Deployed to Google Cloud Run............'
-                        sh 
-                        '''
+                        sh '''
                         export PATH=$PATH:${GCLOUD_PATH}
 
                         gcloud auth activate-service-account --key-file=${GOOGLE_APP_CREDENTIALS}
